@@ -10,8 +10,10 @@ import io.flutter.view.FlutterCallbackInformation
 import java.text.DateFormat
 import java.util.Date
 import java.util.concurrent.TimeUnit.MILLISECONDS
+import android.annotation.SuppressLint
 
 object ThumbnailGenerator {
+    @SuppressLint("RestrictedApi")
     fun mapResultToEmoji(result: ListenableWorker.Result): String =
         when (result) {
             is ListenableWorker.Result.Success -> "\uD83C\uDF89"
